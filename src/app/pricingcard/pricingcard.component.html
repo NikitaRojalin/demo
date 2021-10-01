@@ -1,0 +1,25 @@
+
+      <div class="col-lg-4 p-2">
+        <div class="card mb-5 mb-lg-0 mr-5 " style="width: 18rem;">
+          <div class="card-body p-2">
+            <h5 class="card-title text-muted text-uppercase text-center">{{myData.title}}</h5>
+            <h6 class="card-price text-center">{{myData.price}}<span class="period">{{myData.month}}</span></h6>
+            <hr>
+            <ul class="fa-ul">
+                <div *ngFor="let items of myData.checkedItems;index as i" >
+
+
+              <li><span class="fa-li"><i class="fas fa-check"></i></span>✔{{myData.checkedItems[i]}}</li>
+
+                </div>
+                <div *ngFor="let items of myData.uncheckedItems;index as i">
+              <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>✖{{myData.uncheckedItems[i]}}</li>
+              </div>
+            </ul>
+
+            <div class="d-grid">
+              <a href="#" class="btn btn-primary text-uppercase">Button</a>
+            </div>
+          </div>
+        </div>
+      </div>
